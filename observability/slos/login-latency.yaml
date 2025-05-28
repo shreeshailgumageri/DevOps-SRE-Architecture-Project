@@ -1,0 +1,14 @@
+apiVersion: sloth.slok.dev/v1
+kind: PrometheusServiceLevel
+metadata:
+  name: login-latency
+spec:
+  service: iam-login
+  slos:
+    - name: "Login latency under 300ms"
+      objective: 99.9
+      description: "99.9% of login requests should complete under 300ms"
+      sli:
+        events:
+          errorQuery: sum(rate(http_request_duration_seconds_bucket{le="0.3",handler="/login"}[5m]))
+          totalQuery: sum(rate(http_request_duration_seconds_count{handler="/login"}[5m]))

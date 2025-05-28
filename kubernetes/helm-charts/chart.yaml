@@ -1,0 +1,4 @@
+apiVersion: v2
+name: iam-demo
+description: A Helm chart for IAM demo microservice
+version: 0.1.0

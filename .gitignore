@@ -1,3 +1,9 @@
+# General
+*.log
+*.tmp
+node_modules/
+dist/
+
 # Local .terraform directories
 .terraform/
 
