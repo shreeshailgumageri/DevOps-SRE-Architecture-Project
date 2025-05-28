@@ -65,23 +65,48 @@ Blueprints and code are structured for cross-functional extensibility:
 
 ## 📁 Repository Structure
 
+```bash
+mkdir -p terraform-modules/iam-roles terraform-modules/access-boundaries terraform-modules/audit-logging \
+kubernetes/helm-charts kubernetes/kustomize-overlays \
+observability/slos observability/alerting-rules \
+automation/incident-runbooks .github/workflows docs && \
+echo "# IAM Roles Terraform module: Defines IAM roles and permissions." > terraform-modules/iam-roles/README.md && \
+echo "# Access Boundaries Terraform module: Manages IAM access boundaries." > terraform-modules/access-boundaries/README.md && \
+echo "# Audit Logging Terraform module: Sets up audit logging resources." > terraform-modules/audit-logging/README.md && \
+echo "# Helm charts for Kubernetes IAM components." > kubernetes/helm-charts/README.md && \
+echo "# Kustomize overlays for Kubernetes IAM deployments." > kubernetes/kustomize-overlays/README.md && \
+echo "# SLO definitions for IAM observability." > observability/slos/README.md && \
+echo "# Alerting rules for IAM reliability monitoring." > observability/alerting-rules/README.md && \
+echo "# Automated incident response runbooks." > automation/incident-runbooks/README.md && \
+echo "# GitHub Actions workflows for CI/CD." > .github/workflows/README.md && \
+echo "# Documentation for IAM Reliability Engineering Blueprint." > docs/README.md && \
+echo "# Contribution guidelines for the project." > docs/CONTRIBUTING.md && \
+echo "# Design principles for IAM reliability engineering." > docs/DESIGN_PRINCIPLES.md
+```
+
+<details>
+<summary>Repository Structure</summary>
+
+```
 ├── terraform-modules/
-│ ├── iam-roles/
-│ ├── access-boundaries/
-│ └── audit-logging/
+│   ├── iam-roles/
+│   ├── access-boundaries/
+│   └── audit-logging/
 ├── kubernetes/
-│ ├── helm-charts/
-│ └── kustomize-overlays/
+│   ├── helm-charts/
+│   └── kustomize-overlays/
 ├── observability/
-│ ├── slos/
-│ └── alerting-rules/
+│   ├── slos/
+│   └── alerting-rules/
 ├── automation/
-│ └── incident-runbooks/
+│   └── incident-runbooks/
 ├── .github/
-│ └── workflows/
+│   └── workflows/
 └── docs/
-├── CONTRIBUTING.md
-└── DESIGN_PRINCIPLES.md
+    ├── CONTRIBUTING.md
+    └── DESIGN_PRINCIPLES.md
+```
+</details>
 
 ---
 
