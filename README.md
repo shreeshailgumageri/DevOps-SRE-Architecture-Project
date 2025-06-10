@@ -1,8 +1,24 @@
-# IAM Reliability Engineering Blueprint
+# DevOps / SRE Engineer Blueprint
 
-Welcome to the **IAM Reliability Engineering Blueprint**, a reference implementation designed for high-impact Site Reliability Engineers (SREs) working on Identity and Access Management (IAM) platforms. This repository demonstrates design patterns, automation practices, and tooling integrations aligned with Procore’s expectations for a Staff SRE - IAM.
+A reference implementation designed for high-impact DevOps / Site Reliability Engineers (SREs) working on Identity and Access Management platforms. 
+This repository demonstrates 
+
+## 📚 Architectural Docs
+
+- [CI/CD Best Practices](docs/Architectural-Docs/01_CICD_BEST_PRACTICES.md)
+- [AWS Cloud Best Practices](docs/Architectural-Docs/02_AWS_Cloud_Best_Practices.md)
+- [Security Best Practices](docs/Architectural-Docs/03_Security_Best_Practices.md)
+- [Automation Best Practices](docs/Architectural-Docs/04_Automation_Best_Practices.md)
+- [Kubernetes Architecture](docs/Architectural-Docs/05_Kubernetes_Architecture.md)
+- [Observability Architecture](docs/Architectural-Docs/06_Observability_Architecture.md)
+- [High Availability Architecture](docs/Architectural-Docs/07_High_Availability_Architecture.md)
+- [IAM Architecture](docs/Architectural-Docs/08_IAM%20Architecture.md)
+- [GitOps Practices](docs/Architectural-Docs/09_GitOps_Practices.md)
+- [Disaster Recovery Practices](docs/Architectural-Docs/10_Disaster_recovery_practices.md)
+- [Architecture Overview](docs/Architectural-Docs/ARCHITECTURE.md)
 
 ---
+
 
 ## 🧩 Core Responsibilities
 
@@ -32,25 +48,7 @@ Blueprints and code are structured for cross-functional extensibility:
 
 ---
 
-## 🔧 Key Skills & Tech Stack
-
-| Category              | Tools & Languages                                |
-|-----------------------|--------------------------------------------------|
-| Languages             | Go, Ruby, Java, Node.js                          |
-| Distributed Systems   | Resilient gRPC microservices, Event-driven IAM   |
-| Cloud                 | AWS (preferred), GCP, Azure                      |
-| Containerization      | Kubernetes (Helm, Kustomize)                     |
-| Infra as Code         | Terraform, Ansible, AWS CloudFormation           |
-| CI/CD                 | GitHub Actions, CircleCI, Jenkins, ArgoCD        |
-| Service Mesh          | Istio, Envoy, Consul, Linkerd                    |
-
----
-
 ## 🚀 Strategic Impact
-
-### 🎯 Customer-Facing Reliability
-- Live demo apps instrumented for latency and failure simulation.
-- Example SLOs for login latency and token issuance uptime.
 
 ### 🧑‍🏫 Mentorship
 - Templates for onboarding new SREs.
@@ -65,56 +63,61 @@ Blueprints and code are structured for cross-functional extensibility:
 
 ## 📁 Repository Structure
 
-```bash
-mkdir -p terraform-modules/iam-roles terraform-modules/access-boundaries terraform-modules/audit-logging \
-kubernetes/helm-charts kubernetes/kustomize-overlays \
-observability/slos observability/alerting-rules \
-automation/incident-runbooks .github/workflows docs && \
-echo "# IAM Roles Terraform module: Defines IAM roles and permissions." > terraform-modules/iam-roles/README.md && \
-echo "# Access Boundaries Terraform module: Manages IAM access boundaries." > terraform-modules/access-boundaries/README.md && \
-echo "# Audit Logging Terraform module: Sets up audit logging resources." > terraform-modules/audit-logging/README.md && \
-echo "# Helm charts for Kubernetes IAM components." > kubernetes/helm-charts/README.md && \
-echo "# Kustomize overlays for Kubernetes IAM deployments." > kubernetes/kustomize-overlays/README.md && \
-echo "# SLO definitions for IAM observability." > observability/slos/README.md && \
-echo "# Alerting rules for IAM reliability monitoring." > observability/alerting-rules/README.md && \
-echo "# Automated incident response runbooks." > automation/incident-runbooks/README.md && \
-echo "# GitHub Actions workflows for CI/CD." > .github/workflows/README.md && \
-echo "# Documentation for IAM Reliability Engineering Blueprint." > docs/README.md && \
-echo "# Contribution guidelines for the project." > docs/CONTRIBUTING.md && \
-echo "# Design principles for IAM reliability engineering." > docs/DESIGN_PRINCIPLES.md
-```
-
 <details>
-<summary>Repository Structure</summary>
+<summary>📂 Directory Structure</summary>
 
 ```
-├── terraform-modules/
-│   ├── iam-roles/
-│   ├── access-boundaries/
-│   └── audit-logging/
-├── kubernetes/
-│   ├── helm-charts/
-│   └── kustomize-overlays/
-├── observability/
-│   ├── slos/
-│   └── alerting-rules/
-├── automation/
-│   └── incident-runbooks/
-├── .github/
-│   └── workflows/
-└── docs/
-    ├── CONTRIBUTING.md
-    └── DESIGN_PRINCIPLES.md
+├── README.md
+├── automation
+│   └── incident-runbooks
+│       ├── README.md
+│       └── auth-failure.md
+├── docs
+│   ├── Architecural-Docs
+│   │   ├── 01_CICD_BEST_PRACTICES.md
+│   │   ├── 02_AWS_Cloud_Best_Practices.md
+│   │   ├── 03_Security_Best_Practices.md
+│   │   ├── 04_Automation_Best_Practices.md
+│   │   ├── 05_Kubernetes_Architecture.md
+│   │   ├── 06_Observability_Architecture.md
+│   │   ├── 07_High_Availability_Architecture.md
+│   │   ├── 08_IAM Architecture.md
+│   │   ├── 09_GitOps_Practices.md
+│   │   ├── 10_Disaster_recovery_practices.md
+│   │   └── ARCHITECTURE.md
+│   ├── DESIGN_PRINCIPLES.md
+│   ├── README.md
+│   └── RFC_TEMPLATE.md
+├── kubernetes
+│   ├── helm-charts
+│   │   ├── README.md
+│   │   └── chart.yaml
+│   └── kustomize-overlays
+│       └── README.md
+├── observability
+│   ├── alerting-rules
+│   │   ├── README.md
+│   │   └── iam-alert.yaml
+│   └── slos
+│       ├── README.md
+│       └── login-latency.yaml
+├── scripts
+│   ├── fault-injection
+│   │   └── inject_latency.sh
+│   └── health-check
+│       └── check_auth.sh
+└── terraform-modules
+    ├── access-boundaries
+    │   ├── README.md
+    │   └── main.tf
+    ├── audit-logging
+    │   ├── README.md
+    │   └── main.tf
+    └── iam-roles
+        ├── README.md
+        ├── main.tf
+        └── variables.tf
 ```
 </details>
-
----
-
-## 🔍 Getting Started
-
-1. Clone this repo.
-2. Install Terraform, kubectl, and AWS CLI.
-3. Deploy IAM demo stack using `terraform apply`.
-4. Monitor services using included Grafana dashboards and SLO definitions.
 
 ---
