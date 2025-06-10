@@ -6,6 +6,8 @@ This repository demonstrates
 ## 📚 Architectural Docs
 
 - [CI/CD Best Practices](docs/Architectural-Docs/01_CICD_BEST_PRACTICES.md)
+https://github.com/shreeshailgumgeri/DevOps-SRE-Architecture-Project/blob/main/docs/Architectural-Docs/01_CICD_BEST_PRACTICES.md
+https://github.com/shreeshailgumgeri/DevOps-SRE-Architecture-Project/blob/main/docs/Architecural-Docs/01_CICD_BEST_PRACTICES.md
 - [AWS Cloud Best Practices](docs/Architectural-Docs/02_AWS_Cloud_Best_Practices.md)
 - [Security Best Practices](docs/Architectural-Docs/03_Security_Best_Practices.md)
 - [Automation Best Practices](docs/Architectural-Docs/04_Automation_Best_Practices.md)
