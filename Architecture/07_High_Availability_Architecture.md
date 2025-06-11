@@ -42,4 +42,4 @@ To achieve high availability, follow these detailed steps:
      - Apply backpressure mechanisms to prevent cascading failures during high load.
 
 ---
-![High Availability Architecture](./06_Observability_Architecture.png)
+![High Availability Architecture](./07_High_Availability_Architecture.png)
