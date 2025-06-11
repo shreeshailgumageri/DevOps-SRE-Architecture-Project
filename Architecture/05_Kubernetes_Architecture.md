@@ -38,3 +38,6 @@ A robust Kubernetes architecture is essential for scalable, secure, and maintain
 - **Readiness Probes**: Ensure traffic is only routed to pods that are ready to serve requests.
 
 By following these architectural principles, the Kubernetes platform will be secure, resilient, and adaptable to evolving business and technical requirements.
+
+---
+![Kubernetes Architecture](./05_Kubernetes_Architecture.png)

@@ -62,3 +62,6 @@ Below are detailed steps to implement each best practice:
 - Use AWS X-Ray for distributed tracing and performance analysis.
 - Enable GuardDuty for continuous threat detection and security monitoring.
 - Integrate monitoring with notification services (e.g., SNS, Slack) for real-time alerts.
+
+---
+![AWS Cloud Best Practices](./02_AWS_Cloud_Best_Practices.png)

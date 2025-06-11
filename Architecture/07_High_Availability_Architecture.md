@@ -40,3 +40,6 @@ To achieve high availability, follow these detailed steps:
 10. **Throttling and Backpressure**
      - Implement throttling at the API gateway or service level to limit incoming requests.
      - Apply backpressure mechanisms to prevent cascading failures during high load.
+
+---
+![High Availability Architecture](./06_Observability_Architecture.png)

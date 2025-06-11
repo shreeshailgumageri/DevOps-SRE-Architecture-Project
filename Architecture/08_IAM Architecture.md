@@ -53,4 +53,4 @@ A robust IAM architecture ensures secure, scalable, and auditable access to reso
 - Implement just-in-time access for sensitive operations.
 
 ---
-By following these steps, organizations can build a secure, scalable, and auditable IAM architecture that supports compliance and operational efficiency.
+![IAM Architecture](./08_IAM%20Architecture.png)

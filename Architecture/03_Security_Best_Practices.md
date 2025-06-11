@@ -52,3 +52,5 @@
 - Enable logging for all IAM changes (e.g., CloudTrail, Azure AD logs).
 - Review IAM policies and permissions regularly.
 - Remove unused accounts and restrict permissions to the minimum required.
+
+![Security Best Practices](./03_Security_Best_Practices.png)

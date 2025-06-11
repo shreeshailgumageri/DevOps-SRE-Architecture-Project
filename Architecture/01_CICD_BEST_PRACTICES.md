@@ -52,4 +52,4 @@ Continuous Integration and Continuous Deployment (CI/CD) are essential for moder
 
 ---
 
-Adhering to these best practices will help ensure your CI/CD pipelines are robust, secure, and scalable.
+![CI/CD Best Practices](./01_CICD_BEST_PRACTICES.png)

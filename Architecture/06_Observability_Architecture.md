@@ -62,4 +62,5 @@ A robust observability architecture ensures end-to-end visibility, rapid inciden
 - Set up automated alerts for detected anomalies.
 - Continuously refine models and detection thresholds based on feedback.
 
-By following these steps, you can build a comprehensive observability architecture that enables proactive monitoring, rapid detection, and efficient resolution of incidents.
+---
+![Observability Architecture](./06_Observability_Architecture.png)

@@ -42,4 +42,5 @@ GitOps is a modern approach to managing infrastructure and application deploymen
 - Provide training and documentation on GitOps best practices.
 - Emphasize secure Git usage, access controls, and secret management.
 
-By following these steps, teams can achieve reliable, auditable, and automated infrastructure and application management using GitOps principles.
+---
+![GitOps practices](./09_GitOps_Practices.png)

@@ -53,4 +53,5 @@ Automation is essential for improving efficiency, consistency, and reliability i
 - Use branching and pull requests for code reviews and collaboration.
 - Tag releases and maintain changelogs for traceability.
 
-By following these steps, teams can ensure robust, scalable, and reliable automation practices that support operational excellence.
+---
+![Automation Best Practices](./04_Automation_Best_Practices.png)

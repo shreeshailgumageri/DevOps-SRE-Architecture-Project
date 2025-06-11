@@ -47,4 +47,5 @@ A robust disaster recovery (DR) architecture ensures business continuity and min
 - **Action:** Regularly review and update DR plans to reflect changes in compliance or business objectives.
 
 ---
-By following these steps, organizations can build a resilient disaster recovery architecture that minimizes risk and ensures rapid recovery from disruptions.
+
+![Disaster Recovery Architecture](./10_Disaster_recovery_practices.png)
