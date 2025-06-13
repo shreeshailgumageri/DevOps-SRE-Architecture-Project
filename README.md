@@ -5,17 +5,17 @@ This repository demonstrates
 
 ## 📚 Architectural Docs
 
-- [CI/CD Best Practices](docs/Architectural-Docs/01_CICD_BEST_PRACTICES.md)
-- [AWS Cloud Best Practices](docs/Architectural-Docs/02_AWS_Cloud_Best_Practices.md)
-- [Security Best Practices](docs/Architectural-Docs/03_Security_Best_Practices.md)
-- [Automation Best Practices](docs/Architectural-Docs/04_Automation_Best_Practices.md)
-- [Kubernetes Architecture](docs/Architectural-Docs/05_Kubernetes_Architecture.md)
-- [Observability Architecture](docs/Architectural-Docs/06_Observability_Architecture.md)
-- [High Availability Architecture](docs/Architectural-Docs/07_High_Availability_Architecture.md)
-- [IAM Architecture](docs/Architectural-Docs/08_IAM%20Architecture.md)
-- [GitOps Practices](docs/Architectural-Docs/09_GitOps_Practices.md)
-- [Disaster Recovery Practices](docs/Architectural-Docs/10_Disaster_recovery_practices.md)
-- [Architecture Overview](docs/Architectural-Docs/ARCHITECTURE.md)
+- [CI/CD Best Practices](Architecture/01_CICD_BEST_PRACTICES.md)
+- [AWS Cloud Best Practices](Architecture/02_AWS_Cloud_Best_Practices.md)
+- [Security Best Practices](Architecture/03_Security_Best_Practices.md)
+- [Automation Best Practices](Architecture/04_Automation_Best_Practices.md)
+- [Kubernetes Architecture](Architecture/05_Kubernetes_Architecture.md)
+- [Observability Architecture](Architecture/06_Observability_Architecture.md)
+- [High Availability Architecture](Architecture/07_High_Availability_Architecture.md)
+- [IAM Architecture](Architecture/08_IAM%20Architecture.md)
+- [GitOps Practices](Architecture/09_GitOps_Practices.md)
+- [Disaster Recovery Practices](Architecture/10_Disaster_recovery_practices.md)
+- [Architecture Overview](Architecture/ARCHITECTURE.md)
 
 ## Architectural Guide 
 

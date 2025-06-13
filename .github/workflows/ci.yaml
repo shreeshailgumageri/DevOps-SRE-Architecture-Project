@@ -41,9 +41,9 @@ jobs:
     needs: unit_test
     steps:
       - name: Checkout code
-      uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Docker Build Stage
-      run: echo "Building Docker image (CI/CD Best Practice: Containerization, Immutable Infrastructure)"
+        run: echo "Building Docker image (CI/CD Best Practice: Containerization, Immutable Infrastructure)"
 
   security_scan:
     runs-on: ubuntu-latest
