@@ -1,100 +1,67 @@
-name: CI/CD Skeleton
+name: CI/CD Pipeline
 
 on:
   push:
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Build Stage
-        run: echo "Building the application (CI/CD Best Practice: Fully Automated Pipelines, Consistent Build Environments)"
-
-  static_code_scan:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Static Code Analysis Stage
-        run: echo "Running static code analysis (CI/CD Best Practice: Code Quality and Security, Static Code Analysis)"
-
   lint:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Lint Stage
-        run: echo "Running linting (CI/CD Best Practice: Code Quality and Security, Linting)"
+        run: echo "Running Linting to check code style and quality"
 
-  unit_test:
-    runs-on: ubuntu-latest
-    needs:
-      - build
-      - static_code_scan
-      - lint
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Unit Test Stage
-        run: echo "Running unit tests (CI/CD Best Practice: Pipeline Stage Separation, Code Quality and Security)"
-
-  test:
-    runs-on: ubuntu-latest
-    needs: unit_test
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Docker Build Stage
-        run: echo "Building Docker image (CI/CD Best Practice: Containerization, Immutable Infrastructure)"
-
-  security_scan:
+  code-coverage:
     runs-on: ubuntu-latest
     needs: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Security Scan Stage
-        run: echo "Performing security scan (CI/CD Best Practice: Code Quality and Security)"
 
-  artifact_management:
+      - name: Code Coverage Stage
+        run: echo "Calculating Code Coverage"
+
+  security-scan:
     runs-on: ubuntu-latest
-    needs: security_scan
+    needs: lint
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Artifact Management Stage
-        run: echo "Managing artifacts (CI/CD Best Practice: Artifact Management, Versioning, and Storage)"
+
+      - name: Security Scan Stage
+        run: echo "Running Security Scan to detect vulnerabilities"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Stage
+        run: echo "Running Build Stage"
+
+  test:
+    runs-on: ubuntu-latest
+    needs: security-scan
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test Stage
+        run: echo "Running Test Stage"
 
   deploy:
     runs-on: ubuntu-latest
-    needs: security_scan
+    needs: code-coverage
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Deploy Stage
-        run: echo "Deploying the application (CI/CD Best Practice: Deployment Strategies, Automated Rollbacks, GitOps Principles)"
-
-  monitor:
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - name: Monitoring Stage
-        run: echo "Monitoring deployment and application health (CI/CD Best Practice: Monitoring and Observability)"
-
-  notification:
-    runs-on: ubuntu-latest
-    needs:
-      - build
-      - test
-      - security_scan
-      - deploy
-      - monitor
-      - artifact_management
-    steps:
-      - name: Notification Stage
-        run: echo "Sending notifications (CI/CD Best Practice: Notifications and Alerts)"
+        run: echo "Running Deploy Stage"
