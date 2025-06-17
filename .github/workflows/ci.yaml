@@ -56,6 +56,36 @@ jobs:
       - name: Test Stage
         run: echo "Running Test Stage"
 
+  sanity:
+    runs-on: ubuntu-latest
+    needs: security-scan
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sanity Test Stage
+        run: echo "Running Sanity Tests"
+
+  regression:
+    runs-on: ubuntu-latest
+    needs: security-scan
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Regression Test Stage
+        run: echo "Running Regression Tests"
+
+  uat:
+    runs-on: ubuntu-latest
+    needs: security-scan
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: UAT Test Stage
+        run: echo "Running UAT Tests"
+
   deploy:
     runs-on: ubuntu-latest
     needs: code-coverage
